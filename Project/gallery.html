@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería - Actividades Escolares</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #2c7be5;
+      --primary-dark: #1e5bb8;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --gray: #6c757d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+    }
+
+    nav {
+      background: var(--dark);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      color: var(--primary-dark);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 2.2rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: all 0.35s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+    }
+
+    .caption h3 {
+      color: var(--primary-dark);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .caption p {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1.1rem; }
+      nav ul { flex-direction: column; align-items: center; gap: 0.8rem; }
+      .gallery-grid { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Colegio [Nombre de tu Escuela]</h1>
+    <p>Año Lectivo 2025-2026 • [Grado y Sección] • Galería de Actividades</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Materias</a></li>
+      <li><a href="#">Calendario</a></li>
+      <li><a href="galeria.html" class="active">Galería</a></li>
+      <li><a href="#">Agenda</a></li>
+      <li><a href="#">Tareas</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Galería de Momentos y Trabajos</h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="https://arttoremember.com/about/wp-content/uploads/2024/05/iStock-511387970.jpg" alt="Proyecto STEAM Arte">
+        <div class="caption">
+          <h3>Proyecto STEAM - Arte y Ciencias</h3>
+          <p>3° y 4° grado - Construcción de modelos anatómicos con materiales reciclados (Octubre 2025)</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://misskindergarten.com/wp-content/uploads/2020/03/math-flowers-collage-1024x685.png" alt="Flores matemáticas">
+        <div class="caption">
+          <h3>Matemáticas creativas</h3>
+          <p>Flores geométricas y simetría - 2° grado (Noviembre 2025)</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://www.ucf.edu/wp-content/blogs.dir/19/files/2020/04/teacher-teaching-kids-about-art-and-science.jpg" alt="Clase de arte y ciencia">
+        <div class="caption">
+          <h3>Integración Arte + Ciencias</h3>
+          <p>Experimento volcánico con pintura y explicación oral - 5° grado</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://ceip-badiel.centros.castillalamancha.es/sites/ceip-badiel.centros.castillalamancha.es/files/imagenes/img_20240319_130249.jpg" alt="Proyecto Kandinsky">
+        <div class="caption">
+          <h3>Religión y Arte - Proyecto Kandinsky</h3>
+          <p>Expresión de valores a través del color y la forma - 6° primaria</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://www.iesjrj.es/wp-content/uploads/2023/06/whatsapp-image-2023-06-12-at-11.38.00.jpeg" alt="Robótica aplicada">
+        <div class="caption">
+          <h3>Informática y Robótica</h3>
+          <p>Construcción y programación de robots básicos - Todos los grados</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://marianistas-cr.org/wp-content/uploads/2024/01/IMG-20230523-WA0004.jpg" alt="Actividad grupal">
+        <div class="caption">
+          <h3>Trabajo en equipo - Ciencias Sociales</h3>
+          <p>Maqueta del sistema solar y presentación en inglés (Diciembre 2025)</p>
+        </div>
+      </div>
+
+      <!-- Agrega más items aquí fácilmente copiando y pegando el bloque -->
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 - Portafolio Escolar Digital • Galería de aprendizajes y momentos especiales</p>
+  </footer>
+
+</body>
+</html>
